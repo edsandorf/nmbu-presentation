@@ -1,0 +1,223 @@
+/*-- scss:defaults --*/
+/* Define variables that affect fonts, colors, borders, etc. */
+
+// Define custom colors
+$color-primary: #009a81 !default;
+$color-secondary: #d1e8df !default;
+
+$theme-black: #000000 !default;
+$theme-gray: #e6e6e6 !default;
+$theme-white: #fff !default;
+
+// Change Sass variables used by Reveal themes
+$font-family-sans-serif: “Source Sans Pro”;
+$font-family-monospace:	monospace;
+$presentation-font-size-root: 40px;
+$presentation-font-smaller: 0.7;
+$presentation-line-height: 1.3;
+$body-bg: #fff;
+$body-color: #222;
+$text-muted: lighten($body-color, 50%);
+$link-color: $color-primary;
+$link-color-hover: lighten($link-color, 15%);
+$selection-bg: lighten($link-color, 25%);
+$selection-color: $body-bg;
+$border-color: lighten($body-color, 30%);
+$border-width: 1px;
+$border-radius: 3px;
+$presentation-heading-font: $font-family-sans-serif;
+$presentation-heading-color: $color-primary;
+$presentation-heading-line-height: 1.2;
+$presentation-heading-letter-spacing: normal;
+$presentation-heading-text-transform: none;
+$presentation-heading-text-shadow: none;
+$presentation-h1-text-shadow: none;
+$presentation-heading-font-weight: 600;
+$presentation-h1-font-size: 2.5em;
+$presentation-h2-font-size: 1.6em;
+$presentation-h3-font-size: 1.3em;
+$presentation-h4-font-size: 1em;
+$presentation-block-margin: 15px;
+$presentation-slide-text-align: left;
+$presentation-title-slide-text-align: center;
+$code-block-bg: $body-bg;
+//$code-block-border-color: lighten($body-color, 60%);
+$code-block-border-color: $color-primary;
+$code-block-font-size: 0.55em;
+$code-color: var(–quarto-hl-fu-color);
+$code-bg: transparent;
+$tabset-border-color: $code-block-border-color;
+$light-bg-text-color: #222;
+$light-bg-link-color: #2a76dd;
+$light-bg-code-color: #4758ab;
+$dark-bg-text-color: #fff;
+$dark-bg-link-color: #42affa;
+$dark-bg-code-color: #ffa07a;
+
+/* TODO: Customize presentation appearance by setting SCSS variables */
+/* See https://quarto.org/docs/presentations/revealjs/themes.html#customizing-themes */
+
+/*-- scss:rules --*/
+.inverse {
+  background-color: $color-primary;
+  color: $theme-white;
+  text-shadow: none;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: $color-primary;
+  width: 95%; /* Don't overlap logo */
+}
+
+.inverse h1, .inverse h2 .inverse h3 {
+  color: $theme-white;
+}
+
+.final-slide {
+  height: 100%;
+  width: 100%;
+  background-color: $color-primary;
+}
+
+
+.final-img {
+  padding-top: 200px;
+  margin-top: 100px;
+}
+
+/* White border for sections */
+.white-border {
+  border: 4px solid $theme-white;
+  padding: 2.5%;
+}
+
+/* Photo credit for full screen photos */
+.photo-credit {
+  position: absolute;
+  bottom: 8px;
+  right: 15px;
+  font-size: 18px;
+}
+
+.inverse .photo-credit {
+  color: $theme-white;
+}
+
+// Misc
+.right {
+  float: right;
+  right: 0px;
+  margin: auto;
+}
+
+// Logo
+.reveal .slide-logo {
+  display: block;
+  //background-size: contain;
+  //background-repeat: no-repeat;
+  position: fixed;
+  bottom: unset !important;
+  left: unset !important;
+  top: 5px;
+  right: 5px;
+  height: 110px !important;
+  width: 128px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+  z-index: 0 !important;
+}
+
+// Slide number
+.slide-number, .reveal.has-logo .slide-number {
+  bottom: 10px !important;
+  right: 1.2% !important;
+  top: unset !important;
+  color: $color-primary !important;
+}
+
+// Footer
+.reveal .footer{
+  color: $color-primary;
+  width: 97.5% !important;
+  margin-left: 1.2% !important;
+  padding-top: 5px;
+  margin-right: auto;
+  bottom: 10px !important;
+  //border-top: solid 3px $color-primary;
+}
+
+.suppress-footer .reveal .slide-number {
+  display: none;
+}
+
+// Progressbar
+.reveal .progress {
+  background: $color-secondary;
+  color: $color-primary;
+  bottom: 40px !important;
+  width: 97.5% !important;
+  margin-left: 1.25% !important;
+}
+
+// Menu button
+.slide-menu-button {
+  left: 1.25% !important;
+  bottom: 2.5px !important;
+  color: $color-primary;
+}
+
+// Blocks and boxes
+.content-box-green, .content-box-light-green {
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin: 0 0 15px;
+  overflow: hidden;
+  padding: 20px;
+  width: 100%;
+}
+
+.content-box-green {
+  background-color: $color-primary;
+}
+
+.content-box-light-green {
+  background-color: $color-secondary;
+}
+
+
+/* Block quote */
+.blockquote {
+  padding-left: 15px;
+  border-left: solid 5px $color-primary;
+  width: 70%;
+  margin: 15%;
+}
+
+.inverse .blockquote {
+  padding-left: 15px;
+  border-left: solid 5px $theme-white;
+}
+
+// Names and affiliations
+.authors {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.author-name {
+  flex-grow: 1;
+  margin: 10px;
+}
+
+.affiliations {
+  margin-top: 25px;
+}
+
+.affiliation-name {
+  margin: 0px;
+  padding: 0px;
+}

@@ -1,0 +1,167 @@
+---
+title: NMBU Themed Quarto Presentation
+subtitle: An overview
+format:
+  nmbu-revealjs: default
+author: 
+  - Erlend Dancke Sandorf<sup>a</sup>
+  - Another Authors<sup>b</sup>
+  - A third author<sup>b</sup>
+institute:
+  - <sup>a</sup>The Norwegian University of Life Sciences
+  - <sup>b</sup>A different university
+date: last-modified
+---
+
+```{r setup}
+#| include: false
+library(tidyverse)
+
+```
+
+## Introduction
+
+*TODO* Create an example file that demonstrates the formatting and features of your format.
+
+## More Information and very long title to see what happens when I do
+
+You can learn more about controlling the appearance of RevealJS output here: <https://quarto.org/docs/presentations/revealjs/>
+
+## Include an incremental list
+
+::: incremental
+-   First
+-   Second
+-   Third
+:::
+
+::: notes
+These are my speaker notes
+:::
+
+## Reveal additional content "on click"
+
+Content before the click
+
+. . .
+
+Content after the click
+
+## We can add an *aside* for less important information
+
+Some very important information here
+
+::: aside
+Some additional commentary
+:::
+
+## We can add code blocks
+
+```{r}
+#| echo: true
+#| eval: false
+
+ggplot(airquality, aes(Temp, Ozone)) +
+  geom_point()
+```
+
+## Code block with animation {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| eval: false
+
+ggplot(airquality, aes(Temp, Ozone))
+```
+
+::: notes
+These are my speaker notes
+:::
+
+## Code block with animation {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| eval: false
+
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_point()
+```
+
+## And then the output
+
+```{r}
+#| echo: false
+#| eval: true
+
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_point() + 
+  theme_bw()
+```
+
+## Highlight code
+
+```{r}
+#| echo: true
+#| eval: false
+
+add <- function(x, y) {
+  return(
+    x + y
+  )
+}
+```
+
+## Highlight code
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "2-4"
+
+add <- function(x, y) {
+  return(
+    x + y
+  )
+}
+```
+
+## Adding equations on a page that isn't counted {visibility="uncounted"}
+
+$$\Pr(i_{nit}|\beta) = \frac{\exp(\beta X_{nit})}{\sum_{j=1}^{J}\exp(\beta X_{njt})}$$
+
+. . .
+
+where
+
+-   $\beta$ is a vector of parameters to be estimated
+-   $X_{nit}$ the levels of the attributes
+
+## Slide with a quote
+
+<div class = "blockquote">
+  Statistics is the grammar of science.
+    <p class = "right"> -- <cite>Karl Pearson</cite></p>
+</div>
+
+
+## Multiple columns {transition="fade" transition-speed="fast"}
+
+::: columns
+::: {.column width="40%"}
+This is a column that is 40% the width of the slide.
+:::
+
+::: {.column width="60%"}
+This is a wider column that is 60% the width of the slide. [^1]
+:::
+:::
+
+[^1]: This has a footnote attached
+
+------------------------------------------------------------------------
+
+
+<div class="final-img">
+  <img src="_extensions/nmbu/gfx/final-slide.png" alt="NMBU squares">
+</div>
