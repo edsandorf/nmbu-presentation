@@ -167,6 +167,11 @@ h1, h2, h3 {
   color: $color-primary;
 }
 
+.reveal .slide-chalkboard-buttons {
+  bottom: 2.5px !important;
+  left: 60px !important;
+}
+
 // Blocks and boxes
 .content-box-green, .content-box-light-green {
   box-sizing: border-box;

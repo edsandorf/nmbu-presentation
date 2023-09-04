@@ -18,4 +18,5 @@ contributes:
       code-block-border-left: "#31BAE9"
       code-copy: true
       highlight-style: github
+      chalkboard: true
 
