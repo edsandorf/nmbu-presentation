@@ -57,12 +57,21 @@ $dark-bg-code-color: #ffa07a;
 /* TODO: Customize presentation appearance by setting SCSS variables */
 /* See https://quarto.org/docs/presentations/revealjs/themes.html#customizing-themes */
 
+
+
 /*-- scss:rules --*/
 .inverse {
   background-color: $color-primary;
   color: $theme-white;
   text-shadow: none;
 }
+
+.inverse .slide-background-content {
+  background-color: $color-primary;
+  color: $theme-white;
+  text-shadow: none;
+}
+
 
 /* Headings */
 h1, h2, h3 {
@@ -74,16 +83,9 @@ h1, h2, h3 {
   color: $theme-white;
 }
 
-.final-slide {
-  height: 100%;
-  width: 100%;
-  background-color: $color-primary;
-}
-
 
 .final-img {
-  padding-top: 200px;
-  margin-top: 100px;
+  margin-top: 50%;
 }
 
 /* White border for sections */
@@ -167,10 +169,15 @@ h1, h2, h3 {
   color: $color-primary;
 }
 
+.inverse .slide-menu-button {
+    color: $theme-white;
+}
+
 .reveal .slide-chalkboard-buttons {
   bottom: 2.5px !important;
-  left: 3% !important;
+  left: calc(1.25% + 50px) !important;
 }
+
 
 // Blocks and boxes
 .content-box-green, .content-box-light-green {

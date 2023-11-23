@@ -23,6 +23,7 @@ library(tidyverse)
 
 *TODO* Create an example file that demonstrates the formatting and features of your format.
 
+
 ## More Information and very long title to see what happens when I do
 
 You can learn more about controlling the appearance of RevealJS output here: <https://quarto.org/docs/presentations/revealjs/>
@@ -159,8 +160,8 @@ This is a wider column that is 60% the width of the slide. [^1]
 
 [^1]: This has a footnote attached
 
-------------------------------------------------------------------------
 
+## {.inverse}
 
 <div class="final-img">
   <img src="_extensions/nmbu/gfx/final-slide.png" alt="NMBU squares">
