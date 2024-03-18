@@ -76,7 +76,7 @@ $dark-bg-code-color: #ffa07a;
 /* Headings */
 h1, h2, h3 {
   color: $color-primary;
-  width: 95%; /* Don't overlap logo */
+  //width: 95%; /* Don't overlap logo */
 }
 
 .inverse h1, .inverse h2 .inverse h3 {
@@ -119,20 +119,24 @@ h1, h2, h3 {
   //background-size: contain;
   //background-repeat: no-repeat;
   position: fixed;
-  bottom: unset !important;
-  left: unset !important;
-  top: 5px;
-  right: 5px;
-  height: 110px !important;
-  width: 128px !important;
+  top: unset !important;
+  right: unset !important;
+  bottom: 5px !important;
+  left: 1%;
+  height: 55px !important;
+  width: 64px !important;
   max-width: unset !important;
   max-height: unset !important;
   z-index: 0 !important;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
+
 
 // Slide number
 .slide-number, .reveal.has-logo .slide-number {
-  bottom: 10px !important;
+  bottom: 20px !important;
   right: 1.2% !important;
   top: unset !important;
   color: $color-primary !important;
@@ -145,8 +149,14 @@ h1, h2, h3 {
   margin-left: 1.2% !important;
   padding-top: 5px;
   margin-right: auto;
-  bottom: 10px !important;
+  //bottom: 30px !important;
   //border-top: solid 3px $color-primary;
+}
+
+.reveal .footer p {
+  color: $color-primary;
+  padding-top: 20px;
+
 }
 
 .suppress-footer .reveal .slide-number {
@@ -157,15 +167,15 @@ h1, h2, h3 {
 .reveal .progress {
   background: $color-secondary;
   color: $color-primary;
-  bottom: 40px !important;
+  bottom: 60px !important;
   width: 97.5% !important;
   margin-left: 1.25% !important;
 }
 
 // Menu button
 .slide-menu-button {
-  left: 1.25% !important;
-  bottom: 2.5px !important;
+  left: calc(1% + 65px) !important;
+  bottom: 12.5px !important;
   color: $color-primary;
 }
 
@@ -174,8 +184,8 @@ h1, h2, h3 {
 }
 
 .reveal .slide-chalkboard-buttons {
-  bottom: 2.5px !important;
-  left: calc(1.25% + 50px) !important;
+  bottom: 12.5px !important;
+  left: calc(1% + 65px + 50px) !important;
 }
 
 
