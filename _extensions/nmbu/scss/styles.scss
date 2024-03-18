@@ -221,7 +221,7 @@ h1, h2, h3 {
   border-left: solid 5px $theme-white;
 }
 
-// Names and affiliations
+// TITLE PAGE
 .authors {
   display: flex;
   justify-content: space-between;
@@ -233,13 +233,28 @@ h1, h2, h3 {
 .author-name {
   flex-grow: 1;
   margin: 10px;
+  color: $theme-white;
 }
 
 .affiliations {
   margin-top: 25px;
+  color: $theme-white;
 }
 
 .affiliation-name {
   margin: 0px;
   padding: 0px;
+  color: $theme-white;
 }
+
+h1.title, p.subtitle, p.date {
+  color: $theme-white;
+}
+
+.slide-background:first-child {
+  background-color: $color-primary;
+}
+
+#title-slide {
+  color: $theme-white;
+} 
